@@ -1,0 +1,13 @@
+
+.contactText {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 12px;
+}
+.number {
+  color: #0047FF;
+}
+.contactButton {
+  padding: 8px 16px;
+}
