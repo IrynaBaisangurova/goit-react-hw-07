@@ -7,7 +7,8 @@ import c from "./Contact.module.css";
 const Contact = ({ contact: { name, number, id } }) => {
   const dispatch = useDispatch();
 
-  const onDelete = () => dispatch(deleteContact(id));
+  const onDelete = () => dispatch(deleteContact(id)); 
+
 
   return (
     <>
@@ -33,3 +34,6 @@ const Contact = ({ contact: { name, number, id } }) => {
 };
 
 export default Contact;
+
+
+

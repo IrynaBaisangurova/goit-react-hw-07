@@ -24,6 +24,7 @@ const ContactList = () => {
       ))}
       {error && < ErrorMessage /> }
     </ul>
+ 
   );
 };
 
