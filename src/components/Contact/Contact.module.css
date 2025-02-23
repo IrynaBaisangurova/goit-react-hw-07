@@ -11,3 +11,8 @@
 .contactButton {
   padding: 8px 16px;
 }
+.title {
+	min-width:180px;
+	padding: 4px;
+	text-align: left;
+}

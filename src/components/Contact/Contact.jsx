@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
-import { deleteContact } from "../../redux/contactsSlice";
+import { deleteContact } from "../../redux/contactsOps";
 import { LuPhone } from "react-icons/lu";
 import { GoPerson } from "react-icons/go";
-import css from "./Contact.module.css";
+import c from "./Contact.module.css";
 
 const Contact = ({ contact: { name, number, id } }) => {
   const dispatch = useDispatch();
@@ -12,13 +12,13 @@ const Contact = ({ contact: { name, number, id } }) => {
   return (
     <>
     <div>
-      <div className={css.contactText}>
+      <div className={c.contactText}>
         <GoPerson />
-        <h4>{name}</h4>
+        <h4 className={c.title}>{name}</h4>
       </div>
-      <div className={css.contactText}>
+      <div className={c.contactText}>
         <LuPhone />
-        <p className={css.number}>{number}</p>
+        <p className={c.number}>{number}</p>
       </div>
     </div>
     <button className="contactButton"

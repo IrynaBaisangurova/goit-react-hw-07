@@ -2,8 +2,8 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useId } from "react";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
-import { addContact } from "../../redux/contactsSlice";
-import css from "./ContactForm.module.css";
+import { addContact } from "../../redux/contactsOps";
+import c from "./ContactForm.module.css";
 
 const ContactForm = () => {
   const initialValues = {
@@ -35,44 +35,44 @@ const ContactForm = () => {
     validationSchema={ContactSchema}
   >
     {({ isSubmitting }) => (
-      <Form className={css.form}>
-        <label className={css.label} htmlFor={nameFieldId}>
+      <Form className={c.form}>
+        <label className={c.label} htmlFor={nameFieldId}>
           Name
         </label>
-        <div className={css.inputBlock}>
+        <div className={c.inputBlock}>
           <Field
-            className={css.input}
+            className={c.input}
             type='text'
             name='name'
             id={nameFieldId}
           />
           <ErrorMessage
-            className={css.error}
+            className={c.error}
             name='name'
             component='div'
           />
         </div>
 
-        <label className={css.label} htmlFor={numberFieldId}>
+        <label className={c.label} htmlFor={numberFieldId}>
           Number
         </label>
-        <div className={css.inputBlock}>
+        <div className={c.inputBlock}>
           <Field
-            className={css.input}
+            className={c.input}
             type='tel'
             inputMode='tel'
             name='number'
             id={numberFieldId}
           />
           <ErrorMessage
-            className={css.error}
+            className={c.error}
             name='number'
             component='div'
           />
         </div>
 
         <button
-          className={css.formButton}
+          className={c.formButton}
           type='submit'
           disabled={isSubmitting}
         >

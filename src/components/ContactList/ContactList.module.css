@@ -14,7 +14,8 @@
   border: 1px solid #0047ff;
   padding: 12px;
   flex-shrink: 0;
-  flex-basis: 300px;
+  /* flex-basis: 300px; */
+  flex-basis: calc((100%-40px)/4);
 }
 
 .item:hover,
